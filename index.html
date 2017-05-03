@@ -6,9 +6,7 @@
   </head>
   <body>
 
-  <div id="navBar">
-    <a id="navBtn" href="#">Activate</a>
-  </div>
+
 
   <nav id="navMenu" class="closed">
     <ul>
@@ -20,9 +18,94 @@
     </ul>
   </nav>
 
+<div id="main">
 
+  <div id="navBar">
+    <a id="navBtn" href="#">Activate</a>
+  </div>
+
+
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit facilisis nisi sodales viverra. Mauris dapibus maximus mi a consequat. Morbi blandit blandit quam nec elementum. Duis id felis tincidunt, rhoncus nunc vel, mollis justo. Duis tincidunt congue luctus. Aenean eget ligula ex. Donec maximus arcu a sodales posuere. Proin bibendum magna ac lectus semper mattis. Aenean finibus ex massa, id rutrum nisl mattis quis. Quisque metus nulla, mollis sit amet faucibus at, sodales in augue. Nunc nec lacus dolor. Morbi porta sem vel lectus ultricies bibendum. Maecenas pulvinar massa et elementum mattis. Maecenas magna elit, ullamcorper vel semper vitae, vehicula vitae libero.
+
+</p>
+<p>Maecenas a augue eu urna ultricies pellentesque in quis urna. Aliquam scelerisque leo et magna pretium, at eleifend ex imperdiet. Sed placerat ligula vel ornare consectetur. Ut molestie mauris libero, id eleifend mi luctus ut. Pellentesque dictum ante eget scelerisque pellentesque. Fusce nisi ipsum, sodales non sagittis vel, placerat vel ligula. Aliquam tempus luctus dui, nec iaculis sem sollicitudin vitae. Proin id luctus augue, cursus dapibus urna. Pellentesque congue porta magna, id imperdiet nibh varius in. Vivamus imperdiet sit amet neque commodo egestas. Suspendisse quis est id quam malesuada malesuada.
+
+</p>
+<p>Quisque posuere lobortis hendrerit. Aliquam tincidunt, magna ullamcorper imperdiet hendrerit, risus justo luctus magna, a blandit libero nulla eu orci. Phasellus a dapibus purus. Ut et ligula eu urna varius gravida at et mauris. Nunc posuere sed nulla a accumsan. Nulla in aliquam mi, condimentum interdum elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sed sodales diam, dapibus semper ex. Nunc blandit nunc et nisi hendrerit dignissim. Praesent aliquam urna quis consectetur sagittis. Etiam at convallis libero.
+
+</p>
+
+</div>
 
   </body>
 
   <script src="script.js"></script>
+
+
+<style>
+
+body {overflow-x: hidden;}
+
+/* The side navigation menu */
+#navMenu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    /*left: 0;*/
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    left: -400px;
+}
+
+#navMenu.open {
+  width: 400px;
+  left: 0;
+}
+
+/* The navigation menu links */
+#navMenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+#navMenu a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    left: 0;
+    position: relative;
+    transition: .5s left;
+}
+
+#main.open {
+  left: 400px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+
+
 </html>

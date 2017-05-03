@@ -8,6 +8,7 @@ navigation = function() {
       menuToggle: "#navBtn",           // Selector:  Specify the ID of the toggle element
       menuID: "#navMenu",              // Selector:  Specify the ID of the main menu element
       navbarID: "#navBar",             // Selector:  Specify the ID of the navigation bar
+      container: "#main"
     };
 
   if (arguments[0] && typeof arguments[0] === "object") {
@@ -25,11 +26,12 @@ navigation = function() {
   }
 
   var menu  = document.querySelector(defaults.menuID);
+  var main  = document.querySelector(defaults.container);
       //btn   = document.querySelector(defaults.menuToggle);
       //nabar = document.querySelector(defaults.navbarID);
 
 function initNavigation() {
-
+  main.classList.add('closed');
   menu.classList.add('closed');
   //menu.classList.add(defaults.transitionSpeed);
   menu.setAttribute("style", "speed:" + defaults.transitionSpeed);
@@ -40,6 +42,8 @@ function initNavigation() {
     function b(){
       menu.classList.toggle('closed');
       menu.classList.toggle('open');
+      main.classList.toggle('closed');
+      main.classList.toggle('open');
     }
 
 
@@ -63,48 +67,3 @@ navigation(/*{
     menuID: "#navBar",
     navbarID: "#navBar",
 }*/);
-
-
-
-
-
-
-
-
-
-/*
-  var defaults = {
-    id_navMenu: 'navMenu',
-    id_navBar: 'navBar',
-    id_navBtn: 'navBtn',
-
-    speed: 2000,
-    transition: 'slide',
-    entrance: 'top'
-  };
-
-
-      var navMenu = document.getElementById(this.defaults.menuID);
-      var navBar  = document.getElementById(this.defaults.navBar);
-      var navBtn  = document.getElementById(this.defaults.navBtn);
-
-
-    document.getElementById(defaults.id_navMenu).classList.toggle(defaults.entrance);
-    document.getElementById(defaults.id_navMenu).classList.toggle(defaults.transition);
-
-
-  function b(){
-    document.getElementById(this.defaults.menuID).classList.toggle('closed');
-    document.getElementById(this.defaults.menuID).classList.toggle('open');
-  }
-
-
-document.querySelector('a#navBtn').addEventListener('click', b );
-
-
-}
-
-
-//navSlider('#this', defaults);
-var nav = navSlider(".nav-collapse",{});
-*/
