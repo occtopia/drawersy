@@ -1,4 +1,5 @@
 navigation = function() {
+
 'use strict';
 
     var defaults = {
@@ -25,21 +26,16 @@ navigation = function() {
     return source;
   }
 
-  var menu  = document.querySelector(defaults.menuID);
-  var main  = document.querySelector(defaults.container);
-  var btn   = document.querySelector(defaults.menuToggle);
-      //nabar = document.querySelector(defaults.navbarID);
+  var menu  = document.querySelector(defaults.menuID);      // Assign menu to variable
+  var main  = document.querySelector(defaults.container);   // Assign main container to variable
+  var btn   = document.querySelector(defaults.menuToggle);  // Assign toggle button to variable
 
-function initNavigation() {
-  main.classList.add('closed');
-  menu.classList.add('closed');
-  btn.classList.add('closed');
+  function initNavigation() {
+    main.classList.add('closed');
+    menu.classList.add('closed');
+    btn.classList.add('closed');
 
-  //menu.classList.add(defaults.transitionSpeed);
-  menu.setAttribute("style", "speed:" + defaults.transitionSpeed);
-
-
-
+    menu.setAttribute("style", "speed:" + defaults.transitionSpeed);
 
     function b(){
       menu.classList.toggle('closed');
@@ -63,11 +59,4 @@ initNavigation();
 
 };
 
-navigation(/*{
-    transitionSpeed: 250,
-    transitionType: 'slide',
-    location: 'top',
-    menuToggle: "#navBtn",           // Selector: Specify the ID of the custom toggle element
-    menuID: "#navBar",
-    navbarID: "#navBar",
-}*/);
+navigation();
